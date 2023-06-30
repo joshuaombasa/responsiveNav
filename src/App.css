@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  background-color: palevioletred;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.open, .exit {
+  width: 3em;
+  cursor: pointer;
+}
+
+.nav--container {
+  /* visibility:hidden ; */
+  position: fixed;
+  height: 100vh;
+  background-color: inherit;
+  top: 0;
+  right: 0;
+  width: 66%;
+}
+
+.nav--links--container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+
+.exit {
+  float: right;
+  margin: 1em;
+}
+
+.nav--link {
+  font-size: 1.3rem;
+  display: block;
+  padding: 0.5em 1em;
+  
+}
+
+.nav--link:hover {
+ text-decoration: underline;
+}
+
+@media (min-width:600px) {
+  .header {
+    align-items: center;
+  }
+  .nav--container {
+    /* visibility:hidden ; */
+    position: unset;
+    height: unset;
+    background-color: unset;
+    top: unset;
+    right: unset;
+    width: unset;
+  }
+
+  .open, .exit {
+    display: none;
+  }
+
+  .nav--links--container {
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: row;
+    margin-top: unset;
+  }
+
+  .nav--link {
+    font-size: 1rem;
+    display: unset;
+    padding: 0 0.2em;
+    margin-right: 1em;
+  }
+}
+
+@media (min-width:700px)  {
+  .nav--link {
+    font-size: 1.5em;
+  }
+}
